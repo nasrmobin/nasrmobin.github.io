@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nasr Mobin - Swiss Architectural CV</title>
+    <title>Nasr Mobin - Professinal Life</title>
     <style>
         body {
             background-color: #e0e0e0;
@@ -11,23 +11,6 @@
             display: flex;
             justify-content: center;
             padding: 40px;
-        }
-
-        .copy-btn {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #000;
-            color: white;
-            border: none;
-            padding: 14px 28px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            z-index: 100;
         }
 
         /* Resume Container */
@@ -47,8 +30,6 @@
     </style>
 </head>
 <body>
-
-    <button class="copy-btn" onclick="copyToClipboard()">Copy Swiss Layout</button>
 
     <!-- MAIN GRID TABLE -->
     <table class="resume-table" border="0" cellspacing="0" cellpadding="0">
@@ -79,12 +60,14 @@
         <!-- ROW 2: CONTENT GRID -->
         <tr>
             <!-- COLUMN 1: LEFT SIDEBAR (Metadata) -->
-            <td width="32%" valign="top" style="padding: 30px 30px 40px 40px; border-right: 1px solid #000;">
+            <!-- Adjusted width to 30% -->
+            <td width="30%" valign="top" style="padding: 30px 30px 40px 40px; border-right: 1px solid #000;">
                 
                 <!-- CONTACT -->
                 <div style="margin-bottom: 40px;">
                     <div style="font-family: 'Helvetica', 'Arial', sans-serif; font-size: 8pt; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; border-bottom: 2px solid #000; padding-bottom: 5px; margin-bottom: 10px;">Contact</div>
                     <div style="font-family: 'Helvetica', 'Arial', sans-serif; font-size: 9pt; line-height: 1.6;">
+                        (858) 876-7471<br>
                         <a href="mailto:nasrmobin@gmail.com">nasrmobin@gmail.com</a><br>
                         <a href="https://www.linkedin.com/in/nasr-mobin-568569177">LinkedIn Profile</a>
                     </div>
@@ -119,12 +102,13 @@
                 <div style="margin-bottom: 40px;">
                     <div style="font-family: 'Helvetica', 'Arial', sans-serif; font-size: 8pt; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; border-bottom: 2px solid #000; padding-bottom: 5px; margin-bottom: 10px;">Software</div>
                     <div style="font-family: 'Helvetica', 'Arial', sans-serif; font-size: 9pt; line-height: 1.6; font-weight: 500;">
-                        Revit<br>
                         AutoCAD<br>
+                        Revit<br>
                         SketchUp<br>
                         Bluebeam Revu<br>
                         Adobe Creative Suite<br>
                         MS Project<br>
+                        MS Office<br>
                         Lumion / V-Ray
                     </div>
                 </div>
@@ -132,7 +116,8 @@
             </td>
 
             <!-- COLUMN 2: RIGHT CONTENT (Experience) -->
-            <td width="68%" valign="top" style="padding: 30px 40px 40px 30px;">
+            <!-- Adjusted width to 70% -->
+            <td width="70%" valign="top" style="padding: 30px 40px 40px 30px;">
                 
                 <!-- PROFILE -->
                 <div style="margin-bottom: 40px;">
@@ -239,22 +224,5 @@
         </tr>
     </table>
 
-    <script>
-        function copyToClipboard() {
-            const resume = document.querySelector('.resume-table');
-            const range = document.createRange();
-            range.selectNode(resume);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            
-            try {
-                document.execCommand('copy');
-                alert('Copied! Now paste into Google Docs and set margins to 0.5 inches.');
-            } catch (err) {
-                alert('Please select the table manually and copy.');
-            }
-        }
-    </script>
 </body>
 </html>
