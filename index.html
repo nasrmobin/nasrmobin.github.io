@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nasr Mobin - 1 Professional Minutes</title>
+    <title>Nasr Mobin - 2Professional Minutes</title>
     <style>
         body {
             background-color: #e0e0e0;
@@ -32,10 +32,10 @@
         .job-entry { margin-bottom: 25px; }
         .section-header { margin-bottom: 25px; }
 
-        /* --- PRINT STYLES (Single Page Optimization) --- */
+        /* --- PRINT STYLES (Ultra Compact / 8.5x11 Fit) --- */
         @media print {
             @page {
-                margin: 0.25in; /* Minimum margins */
+                margin: 0.15in; /* Ultra-narrow margins to maximize space */
                 size: letter;   /* 8.5x11 */
             }
             body {
@@ -50,37 +50,58 @@
                 margin: 0 !important;
             }
             
-            /* Aggressive spacing reduction for single page fit */
+            /* 1. Remove Top/Bottom Cell Padding */
             td {
-                padding-top: 15px !important;
-                padding-bottom: 15px !important;
+                padding-top: 10px !important;
+                padding-bottom: 5px !important;
             }
             
-            /* Specific Sidebar/Content Padding overrides */
-            td[width="30%"] { padding: 20px 20px 20px 0 !important; border-right: 1px solid #000 !important;}
-            td[width="70%"] { padding: 20px 0 20px 20px !important; }
+            /* 2. Custom Column Widths (28% / 72%) */
+            /* Note: We target the specific td widths used in HTML to override them */
+            td[width="30%"] { 
+                width: 28% !important; 
+                padding: 10px 15px 10px 0 !important; 
+                border-right: 1px solid #000 !important;
+            }
+            td[width="70%"] { 
+                width: 72% !important; 
+                padding: 10px 0 10px 15px !important; 
+            }
             
-            /* Header compression */
+            /* 3. Header Compression */
             .header-cell {
-                padding: 20px 0 !important;
+                padding: 20px 0 10px 0 !important; /* Minimal vertical padding */
                 border-bottom: 2px solid #000 !important;
             }
             .name-title {
-                font-size: 38pt !important; /* Scale down massive name */
+                font-size: 32pt !important; /* Smaller title to save space */
                 line-height: 0.9 !important;
             }
             
-            /* Reduce vertical gaps */
-            .job-entry, .section-header {
-                margin-bottom: 15px !important;
+            /* 4. Remove whitespace between Experience Items */
+            .job-entry {
+                margin-bottom: 8px !important; /* Very tight spacing */
+            }
+            .section-header {
+                margin-bottom: 10px !important;
             }
             
-            /* Scale text slightly if needed */
-            div, li, p, span {
-                font-size: 95%; 
+            /* Tighter Lists */
+            ul {
+                margin-top: 2px !important;
+                margin-bottom: 0 !important;
+            }
+            li {
+                margin-bottom: 2px !important;
+                font-size: 9pt !important;
             }
             
-            /* Hide the button */
+            /* General Text Scaling */
+            div, p, span {
+                font-size: 9pt !important; 
+            }
+            
+            /* Hide UI elements */
             .copy-btn { display: none !important; }
         }
 
@@ -159,7 +180,6 @@
         <!-- ROW 2: CONTENT GRID -->
         <tr>
             <!-- COLUMN 1: LEFT SIDEBAR (Metadata) -->
-            <!-- Adjusted width to 30% -->
             <td width="30%" valign="top" style="padding: 30px 30px 40px 40px; border-right: 1px solid #000;">
                 
                 <!-- CONTACT -->
@@ -215,7 +235,6 @@
             </td>
 
             <!-- COLUMN 2: RIGHT CONTENT (Experience) -->
-            <!-- Adjusted width to 70% -->
             <td width="70%" valign="top" style="padding: 30px 40px 40px 30px;">
                 
                 <!-- PROFILE -->
