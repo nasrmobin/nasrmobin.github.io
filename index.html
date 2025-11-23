@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nasr Mobin - Professinal Life</title>
+    <title>Nasr Mobin - Swiss Architectural CV</title>
     <style>
         body {
             background-color: #e0e0e0;
@@ -11,6 +11,7 @@
             display: flex;
             justify-content: center;
             padding: 40px;
+            margin: 0;
         }
 
         /* Resume Container */
@@ -27,6 +28,53 @@
         ul { padding-left: 15px; margin: 0; }
         li { margin-bottom: 5px; }
 
+        /* --- MOBILE RESPONSIVENESS --- */
+        /* These styles allow the web preview to look great on phones */
+        /* Google Docs ignores these, so the paste will still be a perfect grid */
+        @media screen and (max-width: 820px) {
+            body {
+                padding: 0;
+                background-color: white;
+            }
+            .resume-table {
+                width: 100% !important;
+                box-shadow: none;
+            }
+            
+            /* Turn table rows into Flex containers to allow reordering */
+            .resume-table tbody, .resume-table tr {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            /* REORDER: Content First, Sidebar Second */
+            /* We target the second row (the content row) and reverse columns */
+            .resume-table tr:nth-child(2) {
+                flex-direction: column-reverse;
+            }
+
+            /* Reset Cells to full width blocks */
+            .resume-table td {
+                display: block;
+                width: 100% !important;
+                box-sizing: border-box;
+                border-right: none !important;
+                border-bottom: 1px solid #eee;
+                padding: 25px !important;
+            }
+
+            /* Adjust Title Size */
+            .name-title {
+                font-size: 36pt !important;
+            }
+            
+            /* Hide the visual border on the title block for cleaner mobile look */
+            .header-cell {
+                border-bottom: 2px solid #000 !important;
+                padding: 30px 20px !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -36,12 +84,12 @@
         
         <!-- ROW 1: THE TITLE BLOCK -->
         <tr>
-            <td colspan="2" style="border-bottom: 4px solid #000; padding: 40px 40px 30px 40px;">
+            <td colspan="2" class="header-cell" style="border-bottom: 4px solid #000; padding: 40px 40px 30px 40px;">
                 <table width="100%" cellspacing="0" cellpadding="0">
                     <tr>
                         <td valign="bottom" width="60%">
                             <!-- Massive Name, Swiss Style -->
-                            <div style="font-family: 'Helvetica', 'Arial', sans-serif; font-size: 52pt; font-weight: 900; text-transform: uppercase; letter-spacing: -2px; line-height: 0.85; color: #000;">
+                            <div class="name-title" style="font-family: 'Helvetica', 'Arial', sans-serif; font-size: 52pt; font-weight: 900; text-transform: uppercase; letter-spacing: -2px; line-height: 0.85; color: #000;">
                                 Nasr<br>Mobin
                             </div>
                         </td>
