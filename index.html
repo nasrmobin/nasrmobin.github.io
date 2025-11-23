@@ -1,1 +1,291 @@
-<h1>test this</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasr Mobin - Docs Optimized</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+        
+        .copy-btn {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #000;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* The Resume Container */
+        .resume-table {
+            width: 750px; /* Slightly narrower to fit Docs default margins */
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-collapse: collapse;
+            color: #222;
+        }
+
+        /* Left Sidebar Styling */
+        .sidebar {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 30px 20px;
+            vertical-align: top;
+            border-right: 2px solid #fff; /* Visual separation */
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            vertical-align: top;
+        }
+
+        /* Typography */
+        .name-text {
+            font-size: 26pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #000;
+            line-height: 1.1;
+            margin-bottom: 5px;
+        }
+
+        .role-text {
+            font-size: 10pt;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            font-size: 10pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #000;
+        }
+        
+        .sidebar-header {
+            font-size: 9pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #999;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        /* Content Blocks */
+        .job-block { margin-bottom: 20px; }
+        
+        .job-title {
+            font-weight: 700;
+            font-size: 11pt;
+            color: #000;
+        }
+        
+        .job-company {
+            font-style: italic;
+            font-size: 10pt;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .job-date {
+            font-size: 9pt;
+            font-weight: 700;
+            color: #555;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        p, li {
+            font-size: 10pt;
+            line-height: 1.5;
+            margin-top: 2px;
+            margin-bottom: 5px;
+        }
+        
+        ul { padding-left: 16px; margin: 0; }
+
+        .contact-info {
+            font-size: 9pt;
+            line-height: 1.6;
+        }
+        
+        a { color: #000; text-decoration: none; }
+
+    </style>
+</head>
+<body>
+
+    <button class="copy-btn" onclick="copyToClipboard()">Copy for Google Docs</button>
+
+    <!-- Simple 2-Column Table Structure -->
+    <table class="resume-table" cellspacing="0" cellpadding="0">
+        <tr>
+            <!-- COLUMN 1: SIDEBAR (30%) -->
+            <td width="30%" class="sidebar">
+                
+                <!-- Contact -->
+                <div style="margin-bottom: 30px;">
+                    <div style="font-weight:700; font-size:14pt; margin-bottom:10px;">NM.</div>
+                    <div class="contact-info">
+                        San Diego, CA<br>
+                        <a href="mailto:nasrmobin@gmail.com">nasrmobin@gmail.com</a><br>
+                        <a href="https://www.linkedin.com/in/nasr-mobin-568569177">LinkedIn Profile</a>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="sidebar-header">Education</div>
+                <div style="margin-bottom: 15px;">
+                    <div style="font-weight: 700; font-size: 9pt;">B.S. Architecture</div>
+                    <div style="font-size: 9pt; color: #555;">NewSchool of Architecture & Design</div>
+                    <div style="font-size: 8pt; color: #666; font-style: italic;">San Diego, CA</div>
+                </div>
+
+                <!-- Licenses -->
+                <div class="sidebar-header">Credentials</div>
+                <div style="margin-bottom: 15px; font-size: 9pt;">
+                    <div style="margin-bottom: 8px;">
+                        <strong>[License Name]</strong><br>
+                        <span style="color:#555">Issuing Organization</span>
+                    </div>
+                    <div>
+                        <strong>[Certification]</strong><br>
+                        <span style="color:#555">Issuing Organization</span>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="sidebar-header">Expertise</div>
+                <div style="font-size: 9pt; line-height: 1.6;">
+                    Project Management<br>
+                    Construction Admin<br>
+                    City Permitting<br>
+                    Design Development<br>
+                    Consultant Coord.<br>
+                    IT Operations
+                </div>
+
+                <!-- Software -->
+                <div class="sidebar-header">Software</div>
+                <div style="font-size: 9pt; line-height: 1.6;">
+                    Revit<br>
+                    AutoCAD<br>
+                    SketchUp<br>
+                    Bluebeam Revu<br>
+                    Adobe Creative Suite<br>
+                    MS Project<br>
+                    Lumion / V-Ray
+                </div>
+
+            </td>
+
+            <!-- COLUMN 2: MAIN CONTENT (70%) -->
+            <td width="70%" class="main-content">
+                
+                <div class="name-text">Nasr Mobin</div>
+                <div class="role-text">Architecture Project Manager</div>
+
+                <div class="section-header">Professional Profile</div>
+                <p>
+                    Seasoned Architecture Project Manager with a comprehensive 21-year career at Ark Architects. Demonstrated expertise in managing complex multi-family residential projects from initial design through construction administration. Proven leader in navigating city permitting processes and managing cross-functional teams.
+                </p>
+
+                <div class="section-header">Professional Experience</div>
+
+                <!-- Job 1 -->
+                <div class="job-block">
+                    <span class="job-date">2018 – Present</span>
+                    <div class="job-title">Project Manager</div>
+                    <div class="job-company">Ark Architects, San Diego</div>
+                    <ul>
+                        <li>Oversee the complete lifecycle of complex architectural projects, specializing in multi-family residential developments ranging from walk-ups to mid-rise structures.</li>
+                        <li>Manage multidisciplinary teams and external consultants to ensure project milestones are met on schedule and within budget.</li>
+                        <li>Successfully navigate challenging city permitting processes, securing necessary approvals.</li>
+                        <li>Lead thorough construction administration phases, resolving site issues and ensuring design fidelity.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="job-block">
+                    <span class="job-date">2012 – 2018</span>
+                    <div class="job-title">Job Captain</div>
+                    <div class="job-company">Ark Architects, San Diego</div>
+                    <ul>
+                        <li>Bridged the gap between design intent and technical execution for large-scale residential projects.</li>
+                        <li>Coordinated construction documentation (CDs) and served as the primary technical liaison for structural and MEP engineering consultants.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="job-block">
+                    <span class="job-date">2006 – 2012</span>
+                    <div class="job-title">Design Staff</div>
+                    <div class="job-company">Ark Architects, San Diego</div>
+                    <ul>
+                        <li>Executed design development tasks, produced architectural drawings, and supported senior staff in project delivery.</li>
+                        <li>Managed digital model coordination and production of rendering assets for client presentations.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 4 -->
+                <div class="job-block">
+                    <span class="job-date">2003 – 2006</span>
+                    <div class="job-title">Architectural Intern</div>
+                    <div class="job-company">Ark Architects, San Diego</div>
+                    <p>Gained foundational experience in architectural practice, drafting, and site analysis while pursuing B.S. in Architecture.</p>
+                </div>
+
+                <div class="section-header">Operational Leadership</div>
+                <p>Played a pivotal role in modernizing Ark Architects' business operations:</p>
+                <ul style="margin-top: 5px;">
+                    <li><strong>IT Management:</strong> Overseeing internal IT infrastructure, hardware procurement, and network troubleshooting.</li>
+                    <li><strong>Brand & Media:</strong> Managing multimedia assets and maintaining the company website to ensure current portfolio representation.</li>
+                </ul>
+
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function copyToClipboard() {
+            const resume = document.querySelector('.resume-table');
+            const range = document.createRange();
+            range.selectNode(resume);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            
+            try {
+                document.execCommand('copy');
+                alert('Copied! Now paste into Google Docs.');
+            } catch (err) {
+                alert('Please select the table manually and copy.');
+            }
+        }
+    </script>
+</body>
+</html>
