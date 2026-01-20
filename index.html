@@ -27,7 +27,14 @@
 
         /* Inline styles are used extensively below to ensure Docs compatibility */
         /* Removed border-bottom from 'a' tag to remove underlines */
-        a { color: #000; text-decoration: none; border-bottom: none; }
+        /* Added position relative/z-index to ensure links stay on top for PDF clicking */
+        a { 
+            color: #000; 
+            text-decoration: none; 
+            border-bottom: none; 
+            position: relative; 
+            z-index: 10; 
+        }
         ul { padding-left: 15px; margin: 0; }
         li { margin-bottom: 5px; }
         
@@ -196,7 +203,7 @@
                         <a href="https://www.linkedin.com/in/nasr-mobin-568569177">
                             <i class="fa-brands fa-linkedin-in" style="margin-right: 8px; font-size: 8pt;"></i> LinkedIn Profile
                         </a><br>
-                        <a href="https://drive.google.com/file/d/1Ld9Sg0s3Mb5cesnYaPhQgdysgZfOvscv/view?usp=sharing" target="_blank">
+                        <a href="https://drive.google.com/file/d/1Ld9Sg0s3Mb5cesnYaPhQgdysgZfOvscv/view?usp=sharing">
                             <i class="fa-solid fa-folder-open" style="margin-right: 8px; font-size: 8pt;"></i> Portfolio
                         </a>
                     </div>
